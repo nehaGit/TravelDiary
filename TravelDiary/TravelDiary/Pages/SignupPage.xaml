@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelDiary.SignupPage">
+  <RelativeLayout>
+    <Image Source="bg_login.jpg" Opacity="0.35" RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height}" Aspect="Fill"/>
+    <StackLayout RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Width}" RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,Property=Height}"  Padding="15,90,15,0" Spacing="40" >
+
+      <Label
+          HorizontalOptions="CenterAndExpand">
+        <Label.FormattedText>
+          <FormattedString>
+            <Span Text="travel" FontSize="50" ForegroundColor="White"/>
+            <Span Text="Diary" FontSize="50" ForegroundColor="#17D17E" FontAttributes="Bold" />
+          </FormattedString>
+        </Label.FormattedText>
+      </Label>
+
+      <StackLayout  HorizontalOptions="FillAndExpand" Padding="0,30,0,0" Spacing="10">
+        <StackLayout  HorizontalOptions="FillAndExpand">
+          
+          <StackLayout  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Image Source="avatar.png" />
+            <Entry Placeholder="name" TextColor="#17D17E" HorizontalOptions="FillAndExpand"/>
+          </StackLayout>
+          <BoxView BackgroundColor="#17D17E" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout  HorizontalOptions="FillAndExpand">
+          
+          <StackLayout  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Image Source="mail.png" />
+            <Entry Placeholder="email" TextColor="#17D17E" Keyboard="Email"  HorizontalOptions="FillAndExpand"/>
+          </StackLayout>
+          <BoxView BackgroundColor="#17D17E" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        
+          <StackLayout  HorizontalOptions="FillAndExpand">
+          
+          <StackLayout  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Image Source="mobile.png" />
+            <Entry Placeholder="mobile" TextColor="#17D17E" Keyboard="Telephone"  HorizontalOptions="FillAndExpand"/>
+          </StackLayout>
+          <BoxView BackgroundColor="#17D17E" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout  HorizontalOptions="FillAndExpand">
+          <StackLayout  HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+            <Image Source="key.png" />
+            <Entry Placeholder="password" IsPassword="True" TextColor="#17D17E"  HorizontalOptions="FillAndExpand"/>
+          </StackLayout>
+          <BoxView BackgroundColor="#17D17E" HeightRequest="1"  HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+      </StackLayout>
+      <StackLayout>
+      <Button Text="Sign up" TextColor="White" BorderRadius="10" FontSize="18" FontAttributes="Bold"  HeightRequest="55" BackgroundColor="#17D17E"   />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="0">
+        <Label Text="Already have an account? " TextColor="White" FontSize="16" HeightRequest="40" VerticalTextAlignment="Center"/>
+        <Button Text="Login Now" TextColor="#17D17E"  FontSize="15" HeightRequest="40" Command="{Binding LogintapCommand}" BackgroundColor="Transparent"  />
+        </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+  </RelativeLayout>
+</ContentPage>

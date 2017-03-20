@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TravelDiary.Control;assembly=TravelDiary"
+             x:Class="TravelDiary.Pages.FeedDetailPage" Title="TravelDiary Blog">
+  <ScrollView>
+  <StackLayout Spacing="20">
+    <RelativeLayout x:Name="cLayout" HeightRequest="220"></RelativeLayout>
+    <StackLayout Padding="20,0,20,30">
+      <StackLayout Padding="5,5,5,5" BackgroundColor="#17D17E" HorizontalOptions="Start">
+        <Label Text="MANALI" TextColor="White"  FontSize="15"/>
+      </StackLayout>
+      <Label Text="Wonderful sight at the city during night" TextColor="Black" FontAttributes="Bold" FontSize="25"/>
+      <local:TDLabel x:Name="lblBlog" FontSize="16" LineSpacing="1.5"/>
+      <BoxView HeightRequest="1" BackgroundColor="#17D17E" />
+        <StackLayout Orientation="Horizontal" Spacing="25"  Padding="0,20,0,0" >
+          <Image Source="profilepic.jpg" HeightRequest="60" WidthRequest="60"/>
+          <StackLayout  HorizontalOptions="FillAndExpand" Spacing="0" >
+            <StackLayout Orientation="Horizontal" Spacing="5">
+              <Label Text="Posted By :" TextColor="Gray" FontSize="15" FontAttributes="Italic"  />
+            <Label Text="Mark Bose" TextColor="#17D17E" FontSize="15" FontAttributes="Bold"  />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+              <Label Text="User rating :" TextColor="Gray" FontSize="15" FontAttributes="Italic"  />
+              <Label Text="5.0/7"  FontSize="15"   />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="5">
+              <Label Text="Posted On :" TextColor="Gray" FontSize="15" FontAttributes="Italic" />
+              <Label Text="Today"  FontSize="15"  />
+            </StackLayout>
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  </StackLayout>
+  </ScrollView>
+</ContentPage>
