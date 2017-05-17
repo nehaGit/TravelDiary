@@ -1,25 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:TravelDiary;assembly=TravelDiary"
              x:Class="TravelDiary.AddBlogPage" Title="Write a Story">
   <ScrollView>
     <StackLayout Spacing="0">
       <RelativeLayout x:Name="cLayout" HorizontalOptions="FillAndExpand" HeightRequest="220">
       </RelativeLayout>
       <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
-        <StackLayout HorizontalOptions="FillAndExpand" Padding="20,5,5,5" BackgroundColor="#E6E6E6">
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="15,5,15,5" BackgroundColor="#E6E6E6">
           <Label Text="Rate and Write Story" FontAttributes="Bold"  FontSize="15" TextColor="#848484"  HeightRequest="40"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
         </StackLayout>
         <StackLayout HorizontalOptions="FillAndExpand" Padding="20,5,5,5" >
           <Label Text="Overall Rating" FontSize="15" FontAttributes="Bold"  TextColor="#353746"/>
-          <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal" Spacing="0">
-            <Button Text="1" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
-            <Button Text="2" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
-            <Button Text="3" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
-            <Button Text="4" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
-            <Button Text="5" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
-            <Button Text="6" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
-            <Button Text="7" BackgroundColor="#AAAAAA" HeightRequest="50" WidthRequest="50" />
+          <StackLayout Orientation="Horizontal" HeightRequest="50" Padding="0,5,0,10" Spacing="10" HorizontalOptions="FillAndExpand">
+            <Grid>
+              <Grid.Behaviors>
+                <local:StarBehavior x:Name="starOne" GroupName="myStar"/>
+              </Grid.Behaviors>
+              <Image x:Name="starBlankOne"
+                      Source="{local:ImageResource TravelDiary.Images.star_outline.png}" />
+
+              <Image x:Name="starSelectedOne"
+                      Source="{local:ImageResource TravelDiary.Images.star_selected.png}"
+                      IsVisible="{Binding Source={x:Reference starOne},
+                                    Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+              <Grid.Behaviors>
+                <local:StarBehavior x:Name="starTwo" GroupName="myStar"/>
+              </Grid.Behaviors>
+              <Image x:Name="starBlankTwo" Source="{local:ImageResource TravelDiary.Images.star_outline.png}" />
+              <Image x:Name="starSelectedTwo"  Source="{local:ImageResource TravelDiary.Images.star_selected.png}"
+                      IsVisible="{Binding Source={x:Reference starTwo}, Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+              <Grid.Behaviors>
+                <local:StarBehavior x:Name="starThree" GroupName="myStar"/>
+              </Grid.Behaviors>
+              <Image x:Name="starBlankThree" Source="{local:ImageResource TravelDiary.Images.star_outline.png}" />
+              <Image x:Name="starSelectedThree" Source="{local:ImageResource TravelDiary.Images.star_selected.png}"
+                      IsVisible="{Binding Source={x:Reference starThree},  Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+              <Grid.Behaviors>
+                <local:StarBehavior x:Name="starFour" GroupName="myStar"/>
+              </Grid.Behaviors>
+              <Image x:Name="starBlankFour" Source="{local:ImageResource TravelDiary.Images.star_outline.png}" />
+
+              <Image x:Name="starSelectedFour" Source="{local:ImageResource TravelDiary.Images.star_selected.png}"
+                      IsVisible="{Binding Source={x:Reference starFour}, Path=IsStarred}"/>
+            </Grid>
+            <Grid >
+              <Grid.Behaviors>
+                <local:StarBehavior x:Name="starFive" GroupName="myStar"/>
+              </Grid.Behaviors>
+              <Image x:Name="starBlankFive"  Source="{local:ImageResource TravelDiary.Images.star_outline.png}" />
+
+              <Image x:Name="starSelectedFive" Source="{local:ImageResource TravelDiary.Images.star_selected.png}"
+                      IsVisible="{Binding Source={x:Reference starFive}, Path=IsStarred}"/>
+            </Grid>
+          
           </StackLayout>
           <BoxView BackgroundColor="Gray" HeightRequest="1"/>
           <Label Text="Enter a place " FontSize="15" FontAttributes="Bold"  TextColor="#B7B7B7"/>
