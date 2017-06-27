@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Media;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +19,7 @@ namespace TravelDiary
             InitializeComponent();
 
             BindingContext = new SwitcherPageViewModel();
-
-            var pagesCarousel =Carousel.CreatePagesCarousel();
+            var pagesCarousel = Carousel.CreatePagesCarousel();
             var dots = Carousel.CreatePagerIndicatorContainer();
             cLayout.Children.Add(pagesCarousel,
                         Constraint.RelativeToParent((parent) => { return parent.X; }),
@@ -34,6 +34,51 @@ namespace TravelDiary
                         Constraint.RelativeToParent(parent => parent.Width),
                         Constraint.Constant(18)
                     );
+
+            var addImage = new Image();
+            addImage.Source = "add_icon.png";
+            cLayout.Children.Add(addImage,
+                        Constraint.RelativeToView(pagesCarousel,
+                            (parent, sibling) => { return sibling.Width - 60; }),
+                      Constraint.RelativeToView(pagesCarousel,
+                            (parent, sibling) => { return sibling.Height - 60; }),
+                        Constraint.Constant(40),
+                        Constraint.Constant(40)
+                    );
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += OnTapGestureRecognizerTapped;
+            addImage.GestureRecognizers.Add(tapGestureRecognizer);
+
+        }
+        async void OnTapGestureRecognizerTapped(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                if (!CrossMedia.Current.IsPickPhotoSupported)
+                {
+                    DisplayAlert("Photos Not Supported", ":( Permission not granted to photos.", "OK");
+                    return;
+                }
+                var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+                {
+                    PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium
+                });
+
+                if (file == null)
+                    return;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            //AddImage.Source = ImageSource.FromStream(() =>
+            //{
+            //    var stream = file.GetStream();
+            //    file.Dispose();
+            //    return stream;
+            //});
         }
     }
 

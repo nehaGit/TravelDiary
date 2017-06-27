@@ -6,12 +6,15 @@
   <ScrollView>
     <StackLayout Spacing="0">
       <RelativeLayout x:Name="cLayout" HorizontalOptions="FillAndExpand" HeightRequest="220">
+      
       </RelativeLayout>
+   
+
       <StackLayout HorizontalOptions="FillAndExpand" Spacing="0">
         <StackLayout HorizontalOptions="FillAndExpand" Padding="15,5,15,5" BackgroundColor="#E6E6E6">
           <Label Text="Rate and Write Story" FontAttributes="Bold"  FontSize="15" TextColor="#848484"  HeightRequest="40"  HorizontalOptions="FillAndExpand" VerticalTextAlignment="Center"/>
         </StackLayout>
-        <StackLayout HorizontalOptions="FillAndExpand" Padding="20,5,5,5" >
+        <StackLayout HorizontalOptions="FillAndExpand" Padding="15,5,15,5" Spacing="5" >
           <Label Text="Overall Rating" FontSize="15" FontAttributes="Bold"  TextColor="#353746"/>
           <StackLayout Orientation="Horizontal" HeightRequest="50" Padding="0,5,0,10" Spacing="10" HorizontalOptions="FillAndExpand">
             <Grid>
@@ -64,13 +67,13 @@
           </StackLayout>
           <BoxView BackgroundColor="Gray" HeightRequest="1"/>
           <Label Text="Enter a place " FontSize="15" FontAttributes="Bold"  TextColor="#B7B7B7"/>
-          <Editor />
+          <Entry />
           <BoxView BackgroundColor="Gray" HeightRequest="1"/>
           <Label Text="Enter a Title (Max 50 characters)" FontSize="15" FontAttributes="Bold"  TextColor="#B7B7B7"/>
           <Entry />
           <BoxView BackgroundColor="Gray" HeightRequest="1"/>
           <Label Text="Write something about the place" FontSize="15" FontAttributes="Bold"  TextColor="#B7B7B7"/>
-          <Editor />
+          <Editor HeightRequest="70"/>
           <BoxView BackgroundColor="Gray" HeightRequest="1"/>
           <Button Text="Submit Story" TextColor="White" BorderRadius="10" FontSize="18" FontAttributes="Bold"  HeightRequest="55" BackgroundColor="#17D17E"   />
         </StackLayout>

@@ -40,7 +40,7 @@ namespace TravelDiary
             {
                 Title = "My Account",
                 IconSource = "account.png",
-                TargetType = typeof(FeedDetailPage)
+                TargetType = typeof(AccountPage)
             });
             masterPageItems.Add(new MasterPageItem
             {
