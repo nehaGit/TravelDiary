@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using TravelDiary.Pages;
 using Xamarin.Forms;
 
-namespace TravelDiary.ViewModels
+namespace TravelDiary
 {
     class SwitcherPageViewModel : BaseViewModel
     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TravelDiary.Helper;
 using Xamarin.Forms;
 
-namespace TravelDiary.ViewModels
+namespace TravelDiary
 {
     public class BaseViewModel :  INotifyPropertyChanged
     {

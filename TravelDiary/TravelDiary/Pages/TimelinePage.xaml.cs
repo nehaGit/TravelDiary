@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TravelDiary.ViewModels;
 using Xamarin.Forms;
 
 namespace TravelDiary.Pages
@@ -14,6 +13,8 @@ namespace TravelDiary.Pages
         {
             InitializeComponent();
             this.BindingContext = new TimelineViewModel(this.Navigation);
+            
+         
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TravelDiary
             {
                 Title = "Timeline",
                 IconSource = "timeline.png",
-                TargetType = typeof(HomePage)
+                TargetType = typeof(TimelinePage)
             });
             masterPageItems.Add(new MasterPageItem
             {

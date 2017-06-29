@@ -6,7 +6,6 @@ using System.Text;
 using System.Threading.Tasks;
 using TravelDiary.Helper;
 using TravelDiary.Pages;
-using TravelDiary.ViewModels;
 using Xamarin.Forms;
 using static TravelDiary.Helper.CarouselLayout;
 

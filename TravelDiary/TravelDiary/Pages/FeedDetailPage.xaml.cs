@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TravelDiary.Helper;
-using TravelDiary.ViewModels;
 using Xamarin.Forms;
 
 namespace TravelDiary.Pages
