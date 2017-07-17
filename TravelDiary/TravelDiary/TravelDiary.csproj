@@ -58,6 +58,7 @@
     <Compile Include="Pages\AddBlogPage.xaml.cs">
       <DependentUpon>AddBlogPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BaseContentPage.cs" />
     <Compile Include="Pages\FeedDetailPage.xaml.cs">
       <DependentUpon>FeedDetailPage.xaml</DependentUpon>
     </Compile>

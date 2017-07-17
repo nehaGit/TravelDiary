@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using TravelDiary.Helper;
 using Xamarin.Forms;
 
-namespace TravelDiary.Pages
+namespace TravelDiary
 {
-    public partial class FeedDetailPage : ContentPage
+    public partial class FeedDetailPage : BaseContentPage
     {
         public FeedDetailPage()
         {

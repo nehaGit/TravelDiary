@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-namespace TravelDiary.Control
+namespace TravelDiary
 {
-  public class TDLabel : Label
+    public class TDLabel : Label
     {
         public double LineSpacing { get; set; }
     }

@@ -11,12 +11,12 @@ using Android.Views;
 using Android.Widget;
 using Xamarin.Forms.Platform.Android;
 using TravelDiary.Droid.CustomRenderer;
-using TravelDiary.Control;
+using TravelDiary;
 
 [assembly: ExportRenderer(typeof(TDLabel), typeof(CustomLabelRenderer))]
 namespace TravelDiary.Droid.CustomRenderer
 {
- public class CustomLabelRenderer : LabelRenderer
+    public class CustomLabelRenderer : LabelRenderer
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
@@ -24,8 +24,8 @@ namespace TravelDiary.Droid.CustomRenderer
             if (Control != null)
             {
                 var label = (TDLabel)e.NewElement;
-                if(label!=null)
-                this.Control.SetLineSpacing(1f, (float)label.LineSpacing);
+                if (label != null)
+                    this.Control.SetLineSpacing(1f, (float)label.LineSpacing);
 
                 this.UpdateLayout();
             }

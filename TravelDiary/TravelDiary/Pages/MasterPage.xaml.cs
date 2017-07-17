@@ -22,7 +22,7 @@ namespace TravelDiary
             {
                 Title = "Feeds",
                 IconSource = "home.png",
-                TargetType = typeof(HomePage)
+                TargetType = typeof(FeedDetailPage)
             });
             masterPageItems.Add(new MasterPageItem
             {

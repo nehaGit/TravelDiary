@@ -3,8 +3,62 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelDiary.App">
   <Application.Resources>
+    <ResourceDictionary>
+      <Color x:Key="BlackColor">Black</Color>
+      <Color x:Key="GrayColor">Gray</Color>
+      <Color x:Key="NoColor">Transparent</Color>
+      <Color x:Key="BlackbgColor">#454545</Color>
+      <Color x:Key="GreenColor">#62CD8B</Color>
+      <Color x:Key="WhiteColor">White</Color>
+      <Color x:Key="SandColor">#F6F6F6</Color>
+      <Color x:Key="asphaltPrimary">Gray</Color>
+      <Color x:Key="AppColor">#17D17E</Color>
 
-    <!-- Application resource dictionary -->
+      <Style x:Key="ButtonDarkRoundStyle" TargetType="Button">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource GreenColor}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource BlackbgColor}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="BorderRadius" Value="5" />
+        <Setter Property="BorderColor" Value="{StaticResource NoColor}" />
+        <Setter Property="BorderWidth" Value="1" />
+      </Style>
+      <Style x:Key="ButtonLightRoundStyle" TargetType="Button">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource GreenColor}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource NoColor}" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="BorderRadius" Value="22" />
+        <Setter Property="BorderColor" Value="{StaticResource GreenColor}" />
+        <Setter Property="BorderWidth" Value="1" />
+      </Style>
+      <Style x:Key="ButtonPlainRoundStyle" TargetType="Button">
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="TextColor" Value="{StaticResource GreenColor}" />
+        <Setter Property="BackgroundColor" Value="{StaticResource NoColor}" />
+        <Setter Property="FontSize" Value="Medium" />
+      </Style>
 
+      <Style x:Key="labelHeading" TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource AppColor}" />
+        <Setter Property="HeightRequest" Value="30" />
+        <Setter Property="FontSize">
+          <Setter.Value>
+            <OnPlatform x:TypeArguments="x:Double"
+                        Android="22"
+                        iOS="14" />
+          </Setter.Value>
+        </Setter>
+      </Style>
+
+      <Style x:Key="entryStyle" TargetType="Entry">
+        <Setter Property="TextColor" Value="{StaticResource GreenColor}" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource asphaltPrimary}" />
+      </Style>
+      <Style BasedOn="{StaticResource entryStyle}" TargetType="Entry" />
+    </ResourceDictionary>
   </Application.Resources>
 </Application>
